@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Sum</title>
+
+    <script>
+        // let number = 5
+
+        function getNaturalSum(number) {
+            var number = Number(document.getElementById("number").value)
+            var sum = 0;
+
+            for (i = number; i > 0; i--) {
+                sum += i
+                // console.log(sum)
+            }
+            // document.write(sum)
+            document.getElementById("output").innerHTML = `${sum} is the natural number of ${number}!`
+            // console.log(sum)
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="number">
+    <button onclick="getNaturalSum(number)">Calculate</button>
+
+    <p id="output"></p>
+</body>
+
+</html>

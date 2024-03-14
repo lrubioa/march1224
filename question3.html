@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplying Factorials</title>
+
+    <script>
+
+        function factorial(num) {
+            var num = document.getElementById("num").value
+            var result = 1
+            for (i = num; i > 0; i--) {
+                result *= i
+                // console.log(result)
+            }
+            document.getElementById("output").innerHTML = `The factorial of ${num} is ${result}!`
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="num">
+    <button onclick="factorial(num)">Calculate</button>
+
+    <p id="output"></p>
+</body>
+
+</html>
